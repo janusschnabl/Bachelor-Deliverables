@@ -35,14 +35,8 @@ Transitions are directed edges with a label representing a single symbol:
 "source" -> "target" [label="symbol"]
 ```
 
-## Rules
-
-- All state names must be quoted strings (e.g. `"q0"`).
-- There is exactly **one** initial state.
-- There may be one or more accepting states.
-- Each edge carries exactly **one** symbol label.
-
 ## Notes
 
+- All state names must be quoted strings (e.g. `"q0"`).
 - The graph direction is always left-to-right (`rankdir=LR`).
 - Multiple edges between the same pair of states are allowed (one per symbol).
