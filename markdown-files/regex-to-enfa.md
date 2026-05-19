@@ -28,7 +28,7 @@ let analysis (input: Input) : Output =
 
 The above program takes a [RegEx string](regex.md) and produces a $\epsilon$-NFA using Thompson Constructions in the [dot-language](dot.md).
 
-All of the Thompson Constructions seen below shall be implemented in this task:
+**Below are the exact Thompson Constructions you need to implement. Alternative language equivalent productions are not accepted**
 
 ![image](../Images/thompson.png)
 
@@ -42,6 +42,8 @@ inspectify.ps1 --open
 ```
 
 ## Hints
+
+- File `RegexAST.fs` contains the definition of type `regex`, which you should follow to identify the cases neded in the pattern maching.
 
 ## Feedback & Evaluation
 
