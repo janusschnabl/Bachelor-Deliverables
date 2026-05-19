@@ -32,7 +32,7 @@ A state with no attribute is an ordinary non-accepting, non-initial state.
 Transitions are directed edges with a label representing a single symbol:
 
 ```
-"source" -> "target" [label="symbol"]
+"source" -> "target" [label="label"]
 ```
 
 For the transitions in ε-NFA's you can use the following epsilons: `ε` or `ϵ`

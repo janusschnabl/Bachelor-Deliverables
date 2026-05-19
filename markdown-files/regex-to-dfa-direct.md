@@ -27,16 +27,18 @@ The above program takes an $\epsilon$-NFA and produces a complete DFA in the [do
 
 ### Transformation from $\epsilon$-NFA — Subset Construction with Epsilon Closures
 
-Given an $\epsilon$-NFA $A_E = (Q_E, \Sigma, \delta_E, q_{E0}, F_E)$, construct the DFA $A_D = (Q_D, \Sigma, \delta_D, q_{D0}, F_D)$ as follows:
+Given an $\epsilon$-NFA $A_B = (Q_B, \Sigma, \delta_B, q_{B0}, F_B)$, construct the DFA $A_A = (Q_A, \Sigma, \delta_A, q_{A0}, F_A)$ as follows:
 
-- $Q_D = \mathcal{P}(Q_E)$ — each DFA state is a subset of $\epsilon$-NFA states
-- $q_{D0} = \epsilon\text{-closure}(q_{E0})$ — the start state is the epsilon closure of the original start state
-- $F_D$ consists of all subsets of $Q_E$ that contain at least one state from $F_E$
-- $\delta_D$ is constructed according to:
+- $Q_A = \mathcal{P}(Q_E)$ — each DFA state is a subset of $\epsilon$-NFA states
+- $q_{A0} = \epsilon\text{-closure}(q_{B0})$ — the start state is the epsilon closure of the original start state
+- $F_A$ consists of all subsets of $Q_B$ that contain at least one state from $F_B$
+- $\delta_A$ is constructed according to:
 
-$$\delta_D(\{q_1, \ldots, q_k\}, a) = \epsilon\text{-closure}(\ \delta_E(q_1, a) \cup \ldots \cup \delta_E(q_k, a)\ )$$
+$$\delta_A(\{q_1, \ldots, q_k\}, a) = \epsilon\text{-closure}(\ \delta_B(q_1, a) \cup \ldots \cup \delta_B(q_k, a)\ )$$
 
 The transition from a DFA state (a set of $\epsilon$-NFA states) on symbol $a$ is the epsilon closure of the union of all transitions from each constituent state on $a$.
+
+In representing this automaton we expect you to only output the states reachable from the initial state.
 
 ### Completeness
 

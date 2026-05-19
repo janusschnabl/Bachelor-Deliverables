@@ -36,15 +36,9 @@ A state $s$ is accepting if and only if:
 
 $$\epsilon\text{-closure}(s) \cap F \neq \emptyset$$
 
-The conversion shall be implemented in three steps:
-
-1. **Compute epsilon closures** — For each state $q$, compute $\epsilon\text{-closure}(q)$: the set of all states reachable from $q$ using only $\epsilon$-transitions (including $q$ itself).
-2. **Derive new transitions** — For each state $q$ and each non-$\epsilon$ symbol $a$, compute $d'(q, a)$ as defined above.
-3. **Determine accepting states** — Mark a state $s$ as accepting if its $\epsilon$-closure intersects with the set of accepting states $F$.
-
 ### Pruning
 
-After the transformation, prune all states that cannot be reached from the initial state through any transitions. This keeps the resulting NFA minimal.
+After the transformation, prune all states that cannot be reached from the initial state of the new automaton through any transitions.
 
 Launch inspectify as usual:
 
@@ -56,6 +50,12 @@ inspectify.ps1 --open
 ```
 
 ## Hints
+
+- These 3 concerns can be seperated:
+  - Compute epsilon closures
+  - Define new transitions
+  - Determine new accepting states
+- Do pruning after construction
 
 ## Feedback & Evaluation
 
