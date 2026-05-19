@@ -35,6 +35,8 @@ Transitions are directed edges with a label representing a single symbol:
 "source" -> "target" [label="symbol"]
 ```
 
+For the transitions in ε-NFA's you can use the following epsilons: `ε` or `ϵ`
+
 ## Notes
 
 - All state names must be quoted strings (e.g. `"q0"`).

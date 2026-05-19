@@ -28,6 +28,8 @@ let analysis (input: Input) : Output =
 
 The above program takes a [RegEx string](regex.md) and produces a $\epsilon$-NFA using Thompson Constructions in the [dot-language](dot.md).
 
+For the transitions you can use the following epsilon: `ε` or `ϵ`
+
 **Below are the exact Thompson Constructions you need to implement. Alternative language equivalent productions are not accepted**
 
 ![image](../Images/thompson.png)
