@@ -40,7 +40,7 @@ The transition from a DFA state (a set of $\epsilon$-NFA states) on symbol $a$ i
 
 ### Completeness
 
-The resulting DFA must be **complete**,meaning that every state must have exactly one outgoing transition for every symbol in the alphabet. This means the empty set $\emptyset$ acts as a sink (dead) state, and transitions that would otherwise be undefined must explicitly lead to it.
+The resulting DFA must be **complete**, meaning that every state must have exactly one outgoing transition for every symbol in the alphabet. This means the empty set $\emptyset$ acts as a sink (dead) state, and transitions that would otherwise be undefined must explicitly lead to it.
 
 Launch inspectify as usual:
 
