@@ -55,6 +55,9 @@ inspectify.ps1 --open
 
 ## Hints
 
+- Remember to include the empty set
+- Look for examples in the slides of how subset construction works
+
 ## Feedback & Evaluation
 
 You can evaluate your solution by comparing the result to the ones provided by the `inspectify` tools.
