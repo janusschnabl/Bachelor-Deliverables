@@ -29,7 +29,7 @@ The above program takes an $\epsilon$-NFA and produces a complete DFA in the [do
 
 Given an $\epsilon$-NFA $A_B = (Q_B, \Sigma, \delta_B, q_{B0}, F_B)$, construct the DFA $A_A = (Q_A, \Sigma, \delta_A, q_{A0}, F_A)$ as follows:
 
-- $Q_A = \mathcal{P}(Q_E)$ — each DFA state is a subset of $\epsilon$-NFA states
+- $Q_A = \mathcal{P}(Q_B)$ — each DFA state is a subset of $\epsilon$-NFA states
 - $q_{A0} = \epsilon\text{-closure}(q_{B0})$ — the start state is the epsilon closure of the original start state
 - $F_A$ consists of all subsets of $Q_B$ that contain at least one state from $F_B$
 - $\delta_A$ is constructed according to:
