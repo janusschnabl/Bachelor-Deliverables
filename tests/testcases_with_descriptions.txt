@@ -1,0 +1,55 @@
+RegexToENFA:
+
+a|b|c	:associativity
+a|bc*	:precedence
+a|	:Correct usage of the empty regex in combination with other productions
+(a|b)*abc+() : something using every production
+""	:empty
+a	:literal
+abcdef	:concat
+a|b	:union
+a*	:kleene
+a+	:kleene2
+(a|b)c	:grouping
+a|a	:not collapsing semantically equivalent branches
+
+
+RegexToNFA:
+a	:baseline, nothing to do
+""	:acceptance propogation and pruning
+ab	:single epsilon bridge
+abc	:multiple epsilon bridge (before and after move)
+a|b	:branching epsilons
+a*	:backwards propogation of accepting states
+(a|b)c	:combined example
+(a|b)*abc+() :Large combined example
+((a|b)c)*|() :Large combine example with different structure	
+
+RegexToDFA:
+
+""	: Single state
+ab	: simple multistate subset
+a|b	: simple branching
+a|a	: distinct NFA states combined into one subset behavior
+a*	:looping accepting subsets
+abcdef	: Large alphabet forcing many transitions
+(a|b)c	:branching coming together
+a(a|d)	:branching not in the beginning
+(a|b)*abc+() 	: Large combined example
+((a|)b)*c	: Large combined example
+
+
+RegexToDFADirect
+
+
+""	: Single state
+a	:baseline, nothing to do
+ab	:single epsilon bridge
+abcdef	: Large alphabet forcing many transitions
+a|b	: simple branching with branching epsilons
+a|a	: distinct NFA states combined into one subset behavior
+a*	:looping accepting subsets
+a(a|d)	:branching not in the beginning
+(a|b)c	:branching not in the beginning
+(a|b)*abc+() 	: Large combined example
+((a|b)c)*|() :Large combine example with different structure

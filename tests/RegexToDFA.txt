@@ -1,0 +1,11 @@
+{"regex":""}
+{"regex":"ab"}
+{"regex":"a|b"}
+{"regex":"a|a"}
+{"regex":"a*"}
+{"regex":"abcdef"}
+{"regex":"(a|b)c"}
+{"regex":"a(a|d)"}
+{"regex":"(a|b)*abc+()"}
+{"regex":"(a|b)c*"}
+{"regex":"a|a"}
