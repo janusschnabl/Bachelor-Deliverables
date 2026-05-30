@@ -30,7 +30,7 @@ The above program takes an $\epsilon$-NFA and produces an equivalent NFA in the 
 
 For each state $q$ and each symbol $a$, the new transitions are defined as:
 
-$$d'(q, a) = \epsilon\text{-closure}(\ d(\ \epsilon\text{-closure}(q),\ a\ )\ )$$
+$$\delta'(q, a) = \epsilon\text{-closure}(\ \delta(\ \epsilon\text{-closure}(q),\ a\ )\ )$$
 
 A state $s$ is accepting if and only if:
 
