@@ -23,7 +23,7 @@ let analysis (input: Input) : Output =
     failwith "Module not yet implemented"
 ```
 
-The above program takes an $\epsilon$-NFA and produces a complete DFA in the [dot-language](dot.md), by mimicking the subset construction while accounting for $\epsilon$-transitions.
+The above program takes a [RegEx string](regex.md) and produces a DFA in the [dot-language](dot.md) using the following transformation from your existing $\varepsilon$-NFA construction.
 
 ### Transformation from $\epsilon$-NFA — Subset Construction with Epsilon Closures
 
