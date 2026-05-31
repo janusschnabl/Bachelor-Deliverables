@@ -1,4 +1,4 @@
-# DOT Format
+# DOT Language
 
 All automata in this assignment are represented using the [DOT language](https://graphviz.org/doc/info/lang.html).
 We use a directed graph format with the following structure:
