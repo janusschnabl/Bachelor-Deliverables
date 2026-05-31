@@ -45,6 +45,5 @@ _ ` ~
 ## Notes
 
 - The character set is restricted to printable ASCII only.
-- Non-printable ASCII characters are not allowed unless explicitly handled by the implementation.
 - Control/meta characters must follow the grammar rules of the language.
 - Reserved characters are invalid and may not appear in expressions.
