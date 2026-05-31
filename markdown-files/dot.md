@@ -39,6 +39,6 @@ For the transitions in ε-NFA's you can use the following epsilons: `ε` or `ϵ`
 
 ## Notes
 
-- All state names must be quoted strings (e.g. `"q0"`).
+- Letting all state names be quoted strings (e.g. `"q0"`) is recommended.
 - The graph direction is always left-to-right (`rankdir=LR`).
 - Multiple edges between the same pair of states are allowed (one per symbol).
