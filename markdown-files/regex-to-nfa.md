@@ -24,17 +24,16 @@ let analysis (input: Input) : Output =
     failwith "Module not yet implemented"
 ```
 
-The above program takes an $\epsilon$-NFA and produces an equivalent NFA in the [dot-language](dot.md), by eliminating all $\epsilon$-transitions using epsilon closures.
-
+The above program takes a [RegEx string](regex.md) and produces an NFA in the [dot-language](dot.md) using the following transformation from your existing $\varepsilon$-NFA construction.
 ### Transformation from $\epsilon$-NFA
 
-For each state $q$ and each symbol $a$, the new transitions are defined as:
+For each state $q$ and each symbol $a$ in the $\varepsilon$-NFA, the new transitions in the NFA are defined as:
 
-$$\delta'(q, a) = \epsilon\text{-closure}(\ \delta(\ \epsilon\text{-closure}(q),\ a\ )\ )$$
+$$\delta'(q, a) = \varepsilon\text{-closure}(\ \delta(\ \varepsilon\text{-closure}(q),\ a\ )\ )$$
 
-A state $s$ is accepting if and only if:
+A state $s$ is accepting in the NFA if and only if:
 
-$$\epsilon\text{-closure}(s) \cap F \neq \emptyset$$
+$$\varepsilon\text{-closure}(s) \cap F \neq \emptyset$$
 
 ### Pruning
 
