@@ -23,7 +23,7 @@ let analysis (input: Input) : Output =
     failwith "Module not yet implemented"
 ```
 
-The above program takes an NFA and produces a complete DFA in the [dot-language](dot.md), using the subset construction algorithm.
+The above program takes a [RegEx string](regex.md) and produces a DFA in the [dot-language](dot.md) using the following transformation from your existing NFA construction.
 
 ### Transformation from NFA — Subset Construction
 
